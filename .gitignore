@@ -168,3 +168,38 @@ pca/results/archive/
 !*.yaml
 !*.json
 !*.md
+
+# Additional exclusions for clean repository
+# ========================================
+
+# Git submodules and nested repos - exclude problematic directories  
+encode/scripts/temp_sdr_validators/
+pca/hybrid-ancestry-inference-pipeline/
+
+# Large data directories specific to our analysis
+encode/data/bam/
+encode/data/qc/
+encode/data/fastq/
+encode/data/reference/
+encode/data/variants/
+encode/logs/
+encode/monitoring/
+encode/pipeline/tools/
+wgs_analysis/data/
+data/mage_only/
+
+# Specific large files we've encountered
+*.duplicate_metrics.txt
+*.insert_size_metrics.txt
+*.insert_size_histogram.pdf
+*.flagstat.txt
+*.stats.txt
+*.coverage.txt
+encode_encsr_lookup_results.json
+
+# Keep only essential metadata and small config files
+!metadata/
+!docs/
+!scripts/*.py
+!scripts/*.sh
+!config/
