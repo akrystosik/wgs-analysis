@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://github.com/akrystosik/wgs-analysis/metadata/adni_wgs_variants",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "ADNI (Alzheimer's Disease Neuroimaging Initiative) - Whole Genome Sequencing",
+  "description": "Whole genome sequencing data from the Alzheimer's Disease Neuroimaging Initiative containing genetic variants from participants in the longitudinal study of Alzheimer's disease progression. This protected dataset requires ADNI data use agreement.",
+  "url": "https://adni.loni.usc.edu/",
+  "license": "ADNI Data Use Agreement Required",
+  "creator": {
+    "@type": "Organization",
+    "name": "Alzheimer's Disease Neuroimaging Initiative"
+  },
+  "citation": [
+    "Petersen RC, et al. Alzheimer's Disease Neuroimaging Initiative (ADNI): Clinical characterization. Neurology 74, 201-209 (2010).",
+    "Weiner MW, et al. The Alzheimer's Disease Neuroimaging Initiative 3: Continued innovation for clinical trial improvement. Alzheimer's & Dementia 13, 561-571 (2017)."
+  ],
+  "keywords": [
+    "genetic variants",
+    "WGS",
+    "Alzheimer disease",
+    "neuroimaging",
+    "longitudinal"
+  ],
+  "datePublished": "2025-08-27T19:24:48.459371",
+  "version": "1.0",
+  "identifier": "adni_wgs_variants_20250826",
+  "sc:organism": "Homo sapiens",
+  "sc:assayType": "Whole genome sequencing",
+  "sc:dataType": "genetic variants",
+  "sc:accessLevel": "protected",
+  "sc:dataAccess": "https://ida.loni.usc.edu/",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "source_repository",
+      "name": "source_repository",
+      "description": "Access ADNI (Alzheimer's Disease Neuroimaging Initiative) - Whole Genome Sequencing through official repository",
+      "contentUrl": "https://ida.loni.usc.edu/",
+      "encodingFormat": "text/html",
+      "sha256": "40a829b4d5f566a13a32ef5ca01fecc52abc0252b0e3f943deef92e9ca7aa0af",
+      "sc:accessRequirement": "Authorized access required"
+    }
+  ],
+  "sc:datasetStatistics": {
+    "subjectCount": "~1,700 participants",
+    "estimatedVariants": "~400M variants"
+  },
+  "sc:idaAccess": "https://ida.loni.usc.edu/",
+  "sc:repository": {
+    "@type": "SoftwareSourceCode",
+    "name": "wgs-analysis",
+    "url": "https://github.com/akrystosik/wgs-analysis",
+    "description": "Multi-omics WGS analysis pipeline with paired RNA-seq datasets"
+  }
+}

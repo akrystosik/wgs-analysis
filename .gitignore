@@ -1,0 +1,170 @@
+# Hybrid Ancestry Inference Pipeline - .gitignore
+# ===============================================
+
+# Large genomic data files (>100MB)
+data/variants/all_vcfs/
+data/bam/
+data/fastq/
+data/reference/
+*.vcf.gz
+*.vcf
+*.bam
+*.bai
+*.gvcf
+*.gvcf.gz
+*.fastq
+*.fastq.gz
+*.fasta
+*.fasta.gz
+*.fa
+*.fa.gz
+
+# PLINK binary files and outputs
+*.bed
+*.bim
+*.fam
+*.nosex
+*.eigenval
+*.eigenvec
+*.prune.in
+*.prune.out
+full_genome_clean.*
+merged_data_plink*
+small_subset_plink.*
+ancestry_pca.*
+genome_wide_pruned.*
+subset_*
+toy.*
+plink
+plink.zip
+
+# Pipeline processing files
+monitoring/
+qc/
+reports/
+variants/
+logs/
+*.log
+*.err
+*.out
+*.stdout
+*.stderr
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+*-temporary*
+*.swp
+*.swo
+*~
+
+# Python cache and environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Configuration with sensitive data
+config/local_*.yaml
+config/*_local.yaml
+*_credentials.yaml
+*.key
+*.pem
+.env
+.env.local
+
+# Large reference files
+reference/
+*.dict
+*.amb
+*.ann
+*.bwt
+*.pac
+*.sa
+*.gz.tbi
+*.tbi
+*.csi
+*.idx
+
+# Job scheduler files
+*.sbatch
+*.pbs
+slurm-*.out
+
+# Keep essential analysis results and documentation
+!pca/results/**/*.png
+!pca/results/**/*.txt
+!pca/results/**/*.json
+!pca/results/**/*.md
+
+# But exclude very large result files
+pca/results/**/unified_metadata_v2.csv
+pca/results/**/cellxgene_compliant_metadata.csv
+pca/results/**/comprehensive_ancestry_mapping.csv
+
+# Archive directory (development history)
+archive/
+
+# Results archive
+pca/results/archive/
+
+# Essential project files to keep
+!README.md
+!LICENSE
+!requirements.txt
+!setup.py
+!pyproject.toml
+!environment.yml
+!pca/scripts/
+!pca/docs/
+!pca/*.md
+!scripts/
+!docs/
+!*.py
+!*.sh
+!*.yml
+!*.yaml
+!*.json
+!*.md

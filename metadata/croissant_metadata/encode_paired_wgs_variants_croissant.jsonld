@@ -1,0 +1,355 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://github.com/akrystosik/wgs-analysis/metadata/encode_paired_wgs_variants",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "ENCODE Paired Cell Lines - WGS Variants with RNA-seq",
+  "description": "Whole genome sequencing variant data from 7 ENCODE cell lines with paired RNA-seq data, enabling multi-omics analyses. Contains genetic variants called using DeepVariant and DeepSomatic from cell lines: A549 (lung carcinoma), Caki2 (renal carcinoma), GM23248 (skin fibroblast), HepG2 (hepatocellular carcinoma), K562 (chronic myelogenous leukemia), NCI-H460 (lung carcinoma), and Panc1 (pancreatic ductal carcinoma). These datasets represent diverse cancer cell lines and normal cell lines used in functional genomics studies with corresponding transcriptome data.",
+  "url": "https://www.encodeproject.org/",
+  "license": "CC0",
+  "creator": {
+    "@type": "Organization",
+    "name": "ENCODE Project Consortium"
+  },
+  "citation": [
+    "ENCODE Project Consortium. Expanded encyclopaedias of DNA elements in the human and mouse genomes. Nature 583, 699-710 (2020).",
+    "ENCODE Project Consortium. An integrated encyclopedia of DNA elements in the human genome. Nature 489, 57-74 (2012)."
+  ],
+  "keywords": [
+    "genetic variants",
+    "WGS",
+    "cell lines",
+    "functional genomics",
+    "DeepVariant",
+    "multi-omics",
+    "paired RNA-seq"
+  ],
+  "datePublished": "2025-08-27T19:24:48.462066",
+  "version": "1.0",
+  "identifier": "encode_paired_wgs_variants_20250826",
+  "sc:organism": "Homo sapiens",
+  "sc:assayType": "Whole genome sequencing",
+  "sc:dataType": "genetic variants",
+  "sc:accessLevel": "open",
+  "sc:dataAccess": "https://github.com/akrystosik/wgs-analysis/data/",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "assay",
+      "description": "Whole genome sequencing assay using mixed technologies (Illumina + 10X Chromium)",
+      "propertyID": "assay_ontology_term_id",
+      "value": [
+        "whole genome sequencing assay"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "assay_ontology_term_id",
+      "description": "Ontology term ID for the assay",
+      "propertyID": "assay_ontology_term_id",
+      "value": [
+        "OBI:0002117"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "organism",
+      "description": "Species of origin for the samples",
+      "propertyID": "organism_ontology_term_id",
+      "value": [
+        "Homo sapiens"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "organism_ontology_term_id",
+      "description": "NCBITaxon ontology term for organism",
+      "propertyID": "organism_ontology_term_id",
+      "value": [
+        "NCBITaxon:9606"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tissue",
+      "description": "Cell line tissue types",
+      "propertyID": "tissue_ontology_term_id",
+      "value": [
+        "cell culture"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tissue_ontology_term_id",
+      "description": "Ontology term for tissue",
+      "propertyID": "tissue_ontology_term_id",
+      "value": [
+        "EFO:0000322"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tissue_type",
+      "description": "Type of tissue",
+      "propertyID": "tissue_type",
+      "value": [
+        "cell culture"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "disease",
+      "description": "Disease state of samples",
+      "propertyID": "disease_ontology_term_id",
+      "value": [
+        "cancer"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "disease_ontology_term_id",
+      "description": "Ontology term for disease",
+      "propertyID": "disease_ontology_term_id",
+      "value": [
+        "MONDO:0004992"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "development_stage",
+      "description": "Development stage",
+      "propertyID": "development_stage_ontology_term_id",
+      "value": [
+        "adult"
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "development_stage_ontology_term_id",
+      "description": "Ontology term for development stage",
+      "propertyID": "development_stage_ontology_term_id",
+      "value": [
+        "HsapDv:0000087"
+      ]
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "paired_cell_lines_variants.vcf.gz",
+      "name": "paired_cell_lines_variants.vcf.gz",
+      "description": "VCF file containing genetic variants with 7 samples and ~10,001 variants",
+      "contentUrl": "https://github.com/akrystosik/wgs-analysis/raw/main/data/paired_cell_lines_variants.vcf.gz",
+      "encodingFormat": "application/gzip",
+      "contentSize": "668616783",
+      "md5": "7b8311d45ad8f8da9f515afde7d96335",
+      "sc:variantCount": 10001,
+      "sc:sampleCount": 7
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "genetic_variants",
+      "description": "Genetic variants in VCF format with genotype calls and quality information",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "CHROM",
+          "description": "Chromosome identifier",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "CHROM"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "POS",
+          "description": "Genomic position (1-based)",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "POS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "ID",
+          "description": "Variant identifier (e.g., dbSNP ID)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "REF",
+          "description": "Reference allele sequence",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "REF"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "ALT",
+          "description": "Alternative allele sequence(s)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "ALT"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "QUAL",
+          "description": "Variant quality score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "QUAL"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "FILTER",
+          "description": "Filter status (PASS/FAIL)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "FILTER"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "INFO",
+          "description": "Variant annotation information",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "INFO"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "FORMAT",
+          "description": "Genotype format specification",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "FORMAT"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "GENOTYPES",
+          "description": "Sample genotype calls and associated data",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "paired_cell_lines_variants.vcf.gz"
+            },
+            "extract": {
+              "column": "SAMPLES"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sc:datasetStatistics": {
+    "numberOfVariants": 10001,
+    "numberOfSamples": 7,
+    "fileCount": 1
+  },
+  "sc:repository": {
+    "@type": "SoftwareSourceCode",
+    "name": "wgs-analysis",
+    "url": "https://github.com/akrystosik/wgs-analysis",
+    "description": "Multi-omics WGS analysis pipeline with paired RNA-seq datasets"
+  }
+}

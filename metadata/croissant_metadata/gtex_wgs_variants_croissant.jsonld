@@ -1,0 +1,102 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://github.com/akrystosik/wgs-analysis/metadata/gtex_wgs_variants",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "GTEx (Genotype-Tissue Expression) - Whole Genome Sequencing",
+  "description": "Whole genome sequencing data from the Genotype-Tissue Expression (GTEx) project containing genetic variants from 838 individuals across multiple tissues. This protected dataset is available through dbGaP authorized access.",
+  "url": "https://www.gtexportal.org/",
+  "license": "dbGaP Authorized Access Required",
+  "creator": {
+    "@type": "Organization",
+    "name": "The GTEx Consortium"
+  },
+  "citation": [
+    "The GTEx Consortium. The GTEx Consortium atlas of genetic regulatory effects across human tissues. Science 369, 1318-1330 (2020).",
+    "The GTEx Consortium. Genetic effects on gene expression across human tissues. Nature 550, 204-213 (2017)."
+  ],
+  "keywords": [
+    "genetic variants",
+    "WGS",
+    "eQTL",
+    "tissue",
+    "human",
+    "dbGaP"
+  ],
+  "datePublished": "2025-08-27T19:24:48.464777",
+  "version": "1.0",
+  "identifier": "gtex_wgs_variants_20250826",
+  "sc:organism": "Homo sapiens",
+  "sc:assayType": "Whole genome sequencing",
+  "sc:dataType": "genetic variants",
+  "sc:accessLevel": "protected",
+  "sc:dataAccess": "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000424",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "source_repository",
+      "name": "source_repository",
+      "description": "Access GTEx (Genotype-Tissue Expression) - Whole Genome Sequencing through official repository",
+      "contentUrl": "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000424",
+      "encodingFormat": "text/html",
+      "sha256": "719a3377dc992369112f05b418a8329fd135121bdd0452a3bcc5d7fde0b17bdc",
+      "sc:accessRequirement": "Authorized access required"
+    }
+  ],
+  "sc:datasetStatistics": {
+    "subjectCount": "838 individuals",
+    "estimatedVariants": "~400M variants"
+  },
+  "sc:dbGaPAccession": "phs000424",
+  "sc:repository": {
+    "@type": "SoftwareSourceCode",
+    "name": "wgs-analysis",
+    "url": "https://github.com/akrystosik/wgs-analysis",
+    "description": "Multi-omics WGS analysis pipeline with paired RNA-seq datasets"
+  }
+}

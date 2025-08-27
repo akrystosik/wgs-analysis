@@ -1,0 +1,27 @@
+# Reference Population Projection Analysis Report
+============================================================
+
+## Overview
+Analysis projects ADNI samples onto reference population PC space
+using MAGE samples with known 1000 Genomes ancestry as references.
+
+## Reference Population Composition
+- AFR: 196 samples (26.8%)
+- EUR: 142 samples (19.4%)
+- EAS: 141 samples (19.3%)
+- SAS: 139 samples (19.0%)
+- AMR: 113 samples (15.5%)
+
+## Projection Results
+- Total samples: 2,331
+- Reference samples: 712 (30.5%)
+- Projected samples: 0 (0.0%)
+
+## Confidence Metrics
+
+## Methodology
+- Reference populations: MAGE samples with 1000 Genomes ancestry
+- Projection method: K-Nearest Neighbors + Random Forest ensemble
+- Feature space: Top 20 principal components
+- Confidence threshold: 70% for high-confidence predictions
+- Consensus rule: Use KNN if confidence >70%, else RF if confidence >70%

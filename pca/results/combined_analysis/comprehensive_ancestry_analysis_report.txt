@@ -1,0 +1,74 @@
+# Comprehensive Ancestry Inference Analysis Report
+=================================================================
+
+## Executive Summary
+This report presents the complete results of the hybrid ancestry inference
+pipeline, comparing all methods and data sources.
+
+## Dataset Overview
+- Total samples: 2,331
+- GTEx: 943 samples (40.5%)
+- MAGE: 731 samples (31.4%)
+- ADNI: 650 samples (27.9%)
+- ENCODE: 7 samples (0.3%)
+
+## Performance Summary
+### Stage 1 (Reference-Guided PCA)
+- Assignment rate: 81.0% (1,888/2,331 samples)
+- EUR: 890 (38.2%)
+- Unknown: 443 (19.0%)
+- AMR: 434 (18.6%)
+- AFR: 292 (12.5%)
+- EAS: 137 (5.9%)
+- SAS: 135 (5.8%)
+
+### Stage 2 (ML Projection)
+- Samples projected: 443
+- Uncertain: 326 (73.6%)
+- AFR: 82 (18.5%)
+- EAS: 21 (4.7%)
+- AMR: 8 (1.8%)
+- EUR: 6 (1.4%)
+
+### Final Hybrid Consensus
+- Overall assignment rate: 86.8% (2,024/2,331 samples)
+- EUR: 896 (38.4%)
+- AMR: 442 (19.0%)
+- AFR: 374 (16.0%)
+- Unknown: 307 (13.2%)
+- EAS: 158 (6.8%)
+- SAS: 135 (5.8%)
+- Uncertain: 19 (0.8%)
+
+### Assignment Method Breakdown
+- Stage1_PCA: 1,888 (81.0%)
+- Still_Uncertain: 326 (14.0%)
+- Stage2_ML_Med: 60 (2.6%)
+- Stage2_ML_High: 57 (2.4%)
+
+## Concordance Analysis
+Agreement between self-reported ethnicity and genomic ancestry:
+- ADNI: 4.9% (16/327)
+- GTEx: 94.6% (891/942)
+
+## Confidence Metrics
+- Mean confidence: 0.692
+- High confidence (>0.7): 1,201 (59.3%)
+- Medium confidence (0.5-0.7): 461 (22.8%)
+- Low confidence (<0.5): 362 (17.9%)
+
+## Methodology
+### Stage 1: Reference-Guided PCA Clustering
+- Uses MAGE 1000 Genomes population centroids
+- Assignment threshold: 2.5 standard deviations
+- Minimum confidence: 0.3
+
+### Stage 2: Machine Learning Projection
+- Ensemble: K-Nearest Neighbors + Random Forest
+- Feature space: 20 principal components
+- Confidence threshold: 0.7 for high confidence
+
+### Final Consensus
+- Prioritizes Stage 1 assignments
+- Uses Stage 2 for high-confidence ML predictions (>0.7)
+- Maintains uncertainty for low-confidence predictions

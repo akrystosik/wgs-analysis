@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(gh auth:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:bmcgenomics.biomedcentral.com)",
+      "WebFetch(domain:www.nature.com)",
+      "Bash(./plink:*)",
+      "Bash(cat:*)",
+      "Bash(python:*)",
+      "WebFetch(domain:www.science.org)",
+      "WebFetch(domain:predictdb.org)",
+      "mcp__ide__executeCode",
+      "Bash(zcat:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git config:*)"
+    ],
+    "deny": []
+  }
+}

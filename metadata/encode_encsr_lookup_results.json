@@ -1,0 +1,92 @@
+{
+  "A549": {
+    "cell_line": "A549",
+    "fastq_files": [
+      "ENCFF122NPY",
+      "ENCFF846WHK"
+    ],
+    "encsr_accessions": [
+      "ENCSR521ELB"
+    ],
+    "ENCSR521ELB_details": {
+      "accession": "ENCSR521ELB",
+      "assay_title": "WGS",
+      "biosample_term_name": "Unknown",
+      "description": "",
+      "lab": "Feng Yue, PSU",
+      "status": "released"
+    }
+  },
+  "NCI-H460": {
+    "cell_line": "NCI-H460",
+    "fastq_files": [
+      "ENCFF022XPK",
+      "ENCFF534EUU"
+    ],
+    "encsr_accessions": [
+      "ENCSR654YMF"
+    ],
+    "ENCSR654YMF_details": {
+      "accession": "ENCSR654YMF",
+      "assay_title": "WGS",
+      "biosample_term_name": "Unknown",
+      "description": "",
+      "lab": "Feng Yue, PSU",
+      "status": "released"
+    }
+  },
+  "Panc1": {
+    "cell_line": "Panc1",
+    "fastq_files": [
+      "ENCFF477JTA",
+      "ENCFF896PZG"
+    ],
+    "encsr_accessions": [
+      "ENCSR696BCR"
+    ],
+    "ENCSR696BCR_details": {
+      "accession": "ENCSR696BCR",
+      "assay_title": "WGS",
+      "biosample_term_name": "Unknown",
+      "description": "",
+      "lab": "Feng Yue, PSU",
+      "status": "released"
+    }
+  },
+  "HepG2": {
+    "cell_line": "HepG2",
+    "fastq_files": [
+      "ENCFF320KMG",
+      "ENCFF045JFV"
+    ],
+    "encsr_accessions": [
+      "ENCSR319QHO"
+    ],
+    "ENCSR319QHO_details": {
+      "accession": "ENCSR319QHO",
+      "assay_title": "WGS",
+      "biosample_term_name": "Unknown",
+      "description": "The data contained in this Experiment come from 10X Chromium Genomics WGS of HepG2 cell line",
+      "lab": "Alexander Urban, Stanford",
+      "status": "released"
+    }
+  },
+  "sknmc": {
+    "cell_line": "sknmc",
+    "fastq_files": [
+      "ENCFF212SDN",
+      "ENCFF675TKC"
+    ],
+    "encsr_accessions": [
+      "ENCSR236KYS"
+    ],
+    "ENCSR236KYS_details": {
+      "accession": "ENCSR236KYS",
+      "assay_title": "WGS",
+      "biosample_term_name": "Unknown",
+      "description": "",
+      "lab": "Feng Yue, PSU",
+      "status": "released"
+    }
+  }
+}

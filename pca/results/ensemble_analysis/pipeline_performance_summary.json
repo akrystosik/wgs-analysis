@@ -1,0 +1,35 @@
+{
+  "pipeline_version": "2024.12 Single-Stage Ensemble",
+  "encode_filtered": true,
+  "total_samples": 2324,
+  "samples_assigned": 2324,
+  "assignment_rate": 1.0,
+  "mean_ensemble_confidence": 0.7993071224873071,
+  "median_ensemble_confidence": 0.75,
+  "agreement_rate": 0.3924268502581756,
+  "high_confidence_rate": 0.7478485370051635,
+  "pc_variance_explained": {
+    "PC1": 57.755205878345826,
+    "PC2": 16.549503644146917,
+    "PC3": 4.575979884687274,
+    "PC4": 3.659168204712996,
+    "PC5": 1.6493619327343858,
+    "PC6": 1.4150754882595173,
+    "PC7": 1.3580981958727245,
+    "PC8": 1.22796282039213,
+    "PC9": 1.1927072297150976,
+    "PC10": 1.16334895512247
+  },
+  "ancestry_distribution": {
+    "EUR": 1499,
+    "AFR": 331,
+    "AMR": 189,
+    "EAS": 160,
+    "SAS": 145
+  },
+  "sample_type_distribution": {
+    "GTEx": 943,
+    "MAGE": 731,
+    "ADNI": 650
+  }
+}

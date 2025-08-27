@@ -1,0 +1,57 @@
+# Updated Metadata Schema Report
+==================================================
+
+## Schema Overview
+This updated schema distinguishes between:
+- **Self-reported ethnicity**: From clinical/survey data
+- **Genomic ancestry**: Inferred from genetic analysis
+- **Population assignment**: From reference projection
+
+## Sample Composition
+- Total samples: 20,941
+
+### By Data Source
+- GTEx: 19,553 (93.4%)
+- MAGE: 731 (3.5%)
+- ADNI: 650 (3.1%)
+- ENCODE: 6 (0.0%)
+- Unknown: 1 (0.0%)
+
+### By Sample Type
+- tissue: 20,284 (96.9%)
+- blood: 651 (3.1%)
+- cell_line: 6 (0.0%)
+
+## Ethnicity vs Ancestry
+
+### Self-Reported Ethnicity
+- white: 17,307 (82.6%)
+- black or african american: 2,550 (12.2%)
+- asian: 537 (2.6%)
+- hispanic or latino: 498 (2.4%)
+- american indian or alaska native: 33 (0.2%)
+- multiethnic: 6 (0.0%)
+- unknown or not reported: 2 (0.0%)
+- native hawaiian or other pacific islander: 1 (0.0%)
+
+### Genomic Ancestry
+- EUR: 16,335 (78.0%)
+- AFR: 2,458 (11.7%)
+- Uncertain: 694 (3.3%)
+- AMR: 427 (2.0%)
+- EAS: 223 (1.1%)
+- SAS: 73 (0.3%)
+
+### Concordance Analysis
+- uncertain: 20,203 (96.5%)
+- unknown: 738 (3.5%)
+
+## Quality Metrics
+- Mean ancestry confidence: 0.982
+- High confidence samples (>0.7): 19,516
+
+## Schema Implementation
+- Version: 2.0
+- Created: 2025-07-21 23:16:26
+- Method: PLINK PCA + Reference Projection + ML Classification
+- Markers: 2,884,699 ancestry-informative variants

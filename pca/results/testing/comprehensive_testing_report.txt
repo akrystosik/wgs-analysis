@@ -1,0 +1,177 @@
+# Comprehensive Ancestry Analysis Testing Report
+============================================================
+Generated: 2025-07-18 20:02:37
+
+## Test Summary
+- Total tests: 40
+- Passed: 40 ✅
+- Failed: 0 ❌
+- Warnings: 0 ⚠️
+
+🎉 **ALL TESTS PASSED!**
+
+## Detailed Test Results
+### File exists: PLINK PCA results
+**Status**: ✅ PASS
+**Message**: Found 639,151 bytes
+
+### File exists: PCA variance explained
+**Status**: ✅ PASS
+**Message**: Found 932 bytes
+
+### File exists: PCA visualization
+**Status**: ✅ PASS
+**Message**: Found 757,815 bytes
+
+### File exists: PCA analysis report
+**Status**: ✅ PASS
+**Message**: Found 953 bytes
+
+### File exists: Projection results
+**Status**: ✅ PASS
+**Message**: Found 849,925 bytes
+
+### File exists: Projected assignments
+**Status**: ✅ PASS
+**Message**: Found 89,957 bytes
+
+### File exists: Projection visualization
+**Status**: ✅ PASS
+**Message**: Found 837,883 bytes
+
+### File exists: Projection report
+**Status**: ✅ PASS
+**Message**: Found 1,252 bytes
+
+### File exists: Unified metadata
+**Status**: ✅ PASS
+**Message**: Found 1,533,140 bytes
+
+### File exists: Metadata schema
+**Status**: ✅ PASS
+**Message**: Found 5,245 bytes
+
+### File exists: Simplified metadata
+**Status**: ✅ PASS
+**Message**: Found 160,425 bytes
+
+### File exists: Cell x Gene metadata
+**Status**: ✅ PASS
+**Message**: Found 1,684,273 bytes
+
+### File exists: PLINK binary genotype data
+**Status**: ✅ PASS
+**Message**: Found 8,107,743,691 bytes
+
+### File exists: PLINK variant information
+**Status**: ✅ PASS
+**Message**: Found 870,652,710 bytes
+
+### File exists: PLINK sample information
+**Status**: ✅ PASS
+**Message**: Found 67,219 bytes
+
+### File exists: PCA eigenvalues
+**Status**: ✅ PASS
+**Message**: Found 160 bytes
+
+### File exists: PCA eigenvectors
+**Status**: ✅ PASS
+**Message**: Found 579,460 bytes
+
+### File exists: LD pruned variants
+**Status**: ✅ PASS
+**Message**: Found 102,889,900 bytes
+
+### All required files
+**Status**: ✅ PASS
+**Message**: All expected files found with content
+
+### Sample count consistency
+**Status**: ✅ PASS
+**Message**: All datasets have 2331 samples
+
+### Sample ID consistency
+**Status**: ✅ PASS
+**Message**: IDs consistent between datasets
+
+### PC1 values
+**Status**: ✅ PASS
+**Message**: Range: 0.105920, Std: 0.020705
+
+### PC2 values
+**Status**: ✅ PASS
+**Message**: Range: 0.215458, Std: 0.020691
+
+### PC3 values
+**Status**: ✅ PASS
+**Message**: Range: 0.478913, Std: 0.020667
+
+### PC4 values
+**Status**: ✅ PASS
+**Message**: Range: 0.762624, Std: 0.020696
+
+### PC5 values
+**Status**: ✅ PASS
+**Message**: Range: 1.277629, Std: 0.020717
+
+### Ancestry assignment rate
+**Status**: ✅ PASS
+**Message**: 89.1% of samples assigned
+
+### Confidence scores
+**Status**: ✅ PASS
+**Message**: Range: 0.398 to 1.000
+
+### PC1 variance explained
+**Status**: ✅ PASS
+**Message**: 45.26% (exceeds 8% target)
+
+### Variance decreasing
+**Status**: ✅ PASS
+**Message**: PCs ordered by decreasing variance
+
+### Top 5 PCs variance
+**Status**: ✅ PASS
+**Message**: 72.2% (good coverage)
+
+### Ancestry assignments
+**Status**: ✅ PASS
+**Message**: 2,077 samples assigned to 6 groups
+
+### High confidence predictions
+**Status**: ✅ PASS
+**Message**: 1,627 samples (78.3%)
+
+### Reference samples
+**Status**: ✅ PASS
+**Message**: 254 reference samples
+
+### Projected samples
+**Status**: ✅ PASS
+**Message**: 2,077 projected samples
+
+### Required columns
+**Status**: ✅ PASS
+**Message**: All required columns present
+
+### Cell x Gene compliance
+**Status**: ✅ PASS
+**Message**: Required ontology columns present
+
+### Ancestry terms
+**Status**: ✅ PASS
+**Message**: All ancestry terms valid
+
+### PC orthogonality
+**Status**: ✅ PASS
+**Message**: Max correlation: 0.0035
+
+### Outlier rate
+**Status**: ✅ PASS
+**Message**: 0.3% outliers
+
+## Recommendations
+- ✅ Analysis pipeline is functioning correctly
+- ✅ Data quality meets all requirements
+- ✅ Results are ready for publication/downstream analysis

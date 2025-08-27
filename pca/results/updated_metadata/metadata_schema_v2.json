@@ -1,0 +1,212 @@
+{
+  "metadata_version": "2.0",
+  "created_date": "2025-07-21T23:16:25.903927",
+  "description": "Unified metadata schema distinguishing self-reported ethnicity from genomic ancestry",
+  "sample_identification": {
+    "sample_id": {
+      "type": "string",
+      "description": "Unique sample identifier",
+      "required": true
+    },
+    "original_id": {
+      "type": "string",
+      "description": "Original sample ID from source dataset",
+      "required": false
+    },
+    "data_source": {
+      "type": "categorical",
+      "description": "Source dataset of the sample",
+      "values": [
+        "MAGE",
+        "GTEx",
+        "ADNI",
+        "ENCODE",
+        "1000_Genomes"
+      ],
+      "required": true
+    },
+    "sample_type": {
+      "type": "categorical",
+      "description": "Type of biological sample",
+      "values": [
+        "cell_line",
+        "tissue",
+        "blood",
+        "other"
+      ],
+      "required": true
+    }
+  },
+  "self_reported_ethnicity": {
+    "description": "Ethnicity information as reported by participants or clinical records",
+    "ethnicity_reported": {
+      "type": "categorical",
+      "description": "Self-reported ethnicity/race",
+      "values": [
+        "White",
+        "Black",
+        "Asian",
+        "Hispanic",
+        "Native_American",
+        "Pacific_Islander",
+        "Mixed",
+        "Other",
+        "Unknown"
+      ],
+      "required": false,
+      "source": "clinical_survey"
+    },
+    "ethnicity_confidence": {
+      "type": "categorical",
+      "description": "Confidence in ethnicity reporting",
+      "values": [
+        "high",
+        "medium",
+        "low",
+        "unknown"
+      ],
+      "required": false
+    },
+    "ethnicity_source": {
+      "type": "categorical",
+      "description": "Source of ethnicity information",
+      "values": [
+        "self_reported",
+        "clinical_record",
+        "database_annotation",
+        "inferred"
+      ],
+      "required": false
+    }
+  },
+  "genomic_ancestry": {
+    "description": "Ancestry inferred from genetic/genomic data",
+    "pca_ancestry": {
+      "type": "categorical",
+      "description": "Ancestry inferred from PCA clustering",
+      "values": [
+        "EUR",
+        "AFR",
+        "EAS",
+        "SAS",
+        "AMR",
+        "OCE",
+        "ADMIXED",
+        "Unknown"
+      ],
+      "required": false,
+      "method": "pca_clustering"
+    },
+    "reference_ancestry": {
+      "type": "categorical",
+      "description": "Ancestry from 1000 Genomes reference projection",
+      "values": [
+        "EUR",
+        "AFR",
+        "EAS",
+        "SAS",
+        "AMR",
+        "OCE",
+        "ADMIXED",
+        "Uncertain"
+      ],
+      "required": false,
+      "method": "reference_projection"
+    },
+    "consensus_ancestry": {
+      "type": "categorical",
+      "description": "Consensus ancestry from multiple genomic methods",
+      "values": [
+        "EUR",
+        "AFR",
+        "EAS",
+        "SAS",
+        "AMR",
+        "OCE",
+        "ADMIXED",
+        "Uncertain"
+      ],
+      "required": false,
+      "method": "consensus"
+    },
+    "ancestry_confidence": {
+      "type": "float",
+      "description": "Confidence score for ancestry assignment (0-1)",
+      "range": [
+        0,
+        1
+      ],
+      "required": false
+    }
+  },
+  "population_genetics": {
+    "description": "Population genetics analysis results",
+    "pc_coordinates": {
+      "type": "array",
+      "description": "Principal component coordinates (PC1-PC20)",
+      "required": false
+    },
+    "admixture_proportions": {
+      "type": "object",
+      "description": "Admixture analysis ancestry proportions",
+      "required": false
+    },
+    "genetic_distance": {
+      "type": "float",
+      "description": "Genetic distance to nearest reference population",
+      "required": false
+    }
+  },
+  "quality_control": {
+    "description": "Quality control metrics for ancestry inference",
+    "genotyping_rate": {
+      "type": "float",
+      "description": "Proportion of successfully genotyped variants",
+      "range": [
+        0,
+        1
+      ],
+      "required": false
+    },
+    "heterozygosity": {
+      "type": "float",
+      "description": "Observed heterozygosity rate",
+      "required": false
+    },
+    "inbreeding_coefficient": {
+      "type": "float",
+      "description": "Inbreeding coefficient (F)",
+      "required": false
+    },
+    "ancestry_inference_method": {
+      "type": "categorical",
+      "description": "Method used for ancestry inference",
+      "values": [
+        "pca",
+        "admixture",
+        "reference_projection",
+        "consensus"
+      ],
+      "required": false
+    }
+  },
+  "concordance_analysis": {
+    "description": "Concordance between self-reported and genomic ancestry",
+    "ethnicity_ancestry_concordance": {
+      "type": "categorical",
+      "description": "Agreement between self-reported ethnicity and genomic ancestry",
+      "values": [
+        "concordant",
+        "discordant",
+        "uncertain",
+        "unknown"
+      ],
+      "required": false
+    },
+    "discordance_notes": {
+      "type": "string",
+      "description": "Notes explaining discordance between ethnicity and ancestry",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+sample_type,inferred_ancestry,count
+ADNI,AFR,6
+ADNI,AMR,260
+ADNI,Unknown,384
+ENCODE,Unknown,7
+GTEx,AFR,101
+GTEx,AMR,41
+GTEx,EUR,763
+GTEx,SAS,5
+GTEx,Unknown,33
+MAGE,AFR,185
+MAGE,AMR,133
+MAGE,EAS,137
+MAGE,EUR,127
+MAGE,SAS,130
+MAGE,Unknown,19

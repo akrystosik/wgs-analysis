@@ -1,0 +1,116 @@
+# config/pipeline_config.yaml
+
+# Base directory for all pipeline operations
+base_dir: "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/encode_analysis"
+
+# Directory structure
+data_dirs:
+  reference: "data/reference"
+  fastq: "data/fastq"
+  bam: "data/bam"
+  variants: "data/variants"
+  qc: "data/qc"
+  logs: "logs"
+
+# Reference genome configuration
+reference:
+  fasta: "GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta"
+
+# Library types and their QC thresholds
+library_types:
+  pcr:
+    fastqc:
+      min_sequence_quality: 30
+      min_sequence_length: 100
+      max_n_content: 5
+    bamqc:
+      min_mapping_quality: 20
+      min_base_quality: 20
+      max_duplicate_rate: 0.3
+      min_coverage: 30
+    vcf:
+      min_depth: 10
+      min_quality: 20
+  pcr_free:
+    fastqc:
+      min_sequence_quality: 25
+      min_sequence_length: 100
+      max_n_content: 5
+    bamqc:
+      min_mapping_quality: 20
+      min_base_quality: 20
+      max_duplicate_rate: 0.2
+      min_coverage: 30
+    vcf:
+      min_depth: 10
+      min_quality: 20
+
+# Tool configurations
+tools:
+  # FastQC settings - optimized for I/O performance
+  fastqc:
+    threads: 16
+    memory: "16G"
+    execution:
+      max_processes: 8
+    parallel: true
+    cleanup_temp: true
+
+  # BWA settings - optimized for CPU performance
+  bwa:
+    threads: 64
+    memory: "128G"
+    algorithm: "mem"
+
+  # Samtools settings - balanced for I/O and CPU
+  samtools:
+    threads: 32
+    memory: "64G"
+    memory_per_thread: "4G"
+
+  # Picard settings with explicit path
+  picard:
+    jar_path: "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/picard.jar"
+    memory: "64G"
+    validation_stringency: "LENIENT"
+    tmp_dir: "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/encode_analysis/data/tmp"
+
+  # BAM QC settings with complete metrics
+  bam_qc:
+    threads: 16
+    memory: "32G"
+    metrics:
+      - alignment_summary
+      - insert_size
+      - mark_duplicates
+      - coverage
+    thresholds:
+      min_mapping_quality: 20
+      min_base_quality: 20
+      max_duplicate_rate: 0.3
+      min_coverage: 30
+
+  # DeepVariant settings - optimized for your CPU
+  deepvariant:
+    model_type: "WGS"
+    num_shards: 64
+
+  # DeepSomatic settings preserved
+  deepsomatic:
+    model_type: "WGS_TUMOR_ONLY"
+    num_shards: 64
+
+# Resource limits - optimized for system capabilities
+resource_limits:
+  tmp_dir: "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/encode_analysis/data/tmp"
+  max_memory: "256G"
+  max_threads: 96
+
+# Logging configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Download settings preserved from original
+download_workers: 4
+symlink_fastq: false

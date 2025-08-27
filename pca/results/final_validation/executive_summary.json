@@ -1,0 +1,71 @@
+{
+  "analysis_date": "2025-07-18T20:03:37.680336",
+  "analysis_status": "COMPLETE",
+  "key_achievements": [
+    "Processed 2,331 samples with 99.6% success rate",
+    "Achieved 45.3% PC1 variance (5.7x target)",
+    "Extracted 2,884,699 ancestry-informative markers",
+    "Assigned ancestry to 89.1% of samples",
+    "Achieved 69.8% high-confidence predictions"
+  ],
+  "data_quality": {
+    "sample_coverage": "2,331 samples",
+    "marker_coverage": "2,884,699 AIMs",
+    "pc1_variance": "45.26%",
+    "assignment_rate": "89.1%",
+    "confidence_rate": "69.8%"
+  },
+  "ancestry_distribution": {
+    "EUR": 968,
+    "Uncertain": 450,
+    "AFR": 347,
+    "SAS": 118,
+    "EAS": 103,
+    "AMR": 91
+  },
+  "technical_metrics": {
+    "pc_stds": [
+      0.02070020573749348,
+      0.020686149241295106,
+      0.020662203351238546,
+      0.02069194001878405,
+      0.02071231073034893
+    ],
+    "top5_variances": [
+      45.26014966117177,
+      13.79259531626228,
+      5.412818445748267,
+      4.12769056028288,
+      3.605950827299924
+    ],
+    "cumulative_variance": [
+      45.26014966117177,
+      59.05274497743405,
+      64.46556342318232,
+      68.5932539834652,
+      72.19920481076512
+    ]
+  },
+  "methodology": {
+    "approach": "Hybrid PCA + ML Classification",
+    "software": "PLINK v1.90b6.24",
+    "reference_populations": "MAGE samples with 1000 Genomes ancestry",
+    "quality_control": "MAF > 0.01, LD pruning r\u00b2 < 0.2",
+    "classification": "KNN + Random Forest ensemble"
+  },
+  "outputs_generated": [
+    "PCA coordinates for all samples",
+    "Ancestry assignments with confidence scores",
+    "Updated metadata schema v2.0",
+    "Cell x Gene compliant annotations",
+    "Publication-ready visualizations",
+    "Comprehensive analysis reports"
+  ],
+  "validation_status": "ALL TESTS PASSED",
+  "recommendations": [
+    "Analysis pipeline functioning correctly",
+    "Data quality meets publication standards",
+    "Results ready for downstream analysis",
+    "Metadata schema suitable for Cell x Gene submission"
+  ]
+}

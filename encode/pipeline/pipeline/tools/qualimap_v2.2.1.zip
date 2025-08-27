@@ -1,0 +1,248 @@
+
+<html>
+<head>
+<title>Qualimap: Evaluating next generation sequencing alignment data</title>
+<link rel="shortcut icon" href="img/icon.png" />
+<link rel="stylesheet" type="text/css"  href="qualimap.css" />
+<script type="text/javascript" src="highslide/highslide.js"></script>
+<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+<script type="text/javascript">
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+</script>
+<meta name="description" content="Qualimap Evaluating next generation sequencing alignment data" />
+<meta name="keywords" content="Qualimap, NGS, bam, sam, next generation sequencing, sequencing, quality, charts, java, 
+bioinformatics, genomics, genome, mapping, alignment, noiseq, read, 
+reads" />
+<meta name="author" content="Bioinformatics, Bioinfo, CIPF, Valencia" />
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31924634-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<BODY>
+<div class="pageheader"><img src="img/qualimap_logo_small.png"></img><br>Evaluating next generation<br>sequencing alignment data</div>
+<table class="main">
+<tbody>
+<tr>
+<td class="header">What is it?</td>
+<td class="header">How does it work?</td>
+<td class="header">Features</td>
+<td></td>
+</tr>
+<tr>
+<td class="stuff">
+<br><b>Qualimap 2</b> is a platform-independent application written in Java and R that provides both a Graphical User Inteface (GUI) and a command-line interface to facilitate the quality control of alignment sequencing data and its derivatives like feature counts. 
+<br><br>
+Supported types of experiments include:
+<ul>
+<li>Whole-genome sequencing
+<li>Whole-exome sequencing
+<li>RNA-seq (speical mode available)
+<li>ChIP-seq
+</ul>
+
+
+</td><td class="stuff">
+<br>Qualimap examines sequencing alignment data in <b>SAM/BAM</b> files according to the features of the mapped reads and provides an overall view of the data that helps to the detect biases in the sequencing and/or mapping of the data and eases decision-making for further analysis. 
+<br><br>
+Starting from version 2.0 Qualimap provides <b>multi-sample</b> comparison of alignment and counts data.
+
+</td>
+<td class="stuff">
+<ul>
+<li>Fast analysis accross the reference of genome coverage and nucleotide distribution;
+<li>Easy to interpret summary of the main properties of the alignment data;
+<li>Analysis of the reads mapped inside/outside of the regions provided in GFF format;
+<li>Computation and analysis of read counts obtained from intersectition of read alignments with genomic features;
+<li>Analysis of the adequasy of the sequencing depth in RNA-seq experiments;
+<li>Multi-sample comparison of alignment and counts data; 
+<li>Clustering of epigenomic profiles.
+</ul>
+
+</td>
+</tr>
+<tr>
+<td class="header">Download</tdclass="header">
+<td class="header">Documentation</td>
+<td class="header">Support</td>
+</tr>
+<tr>
+<td class="stuff">Latest package for GNU Linux, MacOS and MS Windows:<br></span>
+
+<a href="https://bitbucket.org/kokonech/qualimap/downloads/qualimap_v2.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/downloads/qualimap']);" >qualimap_v2.3.zip</a>
+
+
+<br><br>
+<a href="https://bitbucket.org/kokonech/qualimap/downloads"> Latest development snapshots </a>
+
+<br><br>
+<a href="https://bitbucket.org/kokonech/qualimap">Public code repository</a>
+<br><br>
+<a href="https://www.dropbox.com/s/n28od44jx5w25fr/maven_repository.tar.gz?dl=0">CIPF BioInfo local Maven repository</a>
+
+<br><br><a href="archive.html">Version history</a>
+
+</td>
+<td class="stuff">
+<a href="doc_html/index.html">QualiMap Online User Manual</a><br>
+<!--a href="QualimapManual.pdf">Qualimap user manual (pdf)</a><br>--!>
+
+<br>Sample data and output can be found <a href="doc_html/samples.html">here</a> 
+<br>
+<br>
+<b>Bioinformatics links:</b><br>
+<br>
+<a href="http://picard.sourceforge.net" >Picard</a>: a Java API (SAM-JDK) for creating programs that read and write SAM files.
+<br>
+<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" >FastQC</a>: a quality control tool for high throughput sequence data.
+<br>
+<a href="http://samtools.sourceforge.net/">SAMTools</a>: essential utilities for manipulating alignments in the SAM format.
+<br>
+<a href="http://www.bioconductor.org/packages/release/bioc/html/NOISeq.html">NOISeq</a>: quality control and differential gene expression analysis for RNA-seq data.</a>
+<br>
+<a href="http://repitools.r-forge.r-project.org/">Repitools</a>: quality assessment, visualization, summarization and statistical analysis of epigenomics experiments.
+<br>
+<br>
+<b>Software development links:</b><br>
+<br>
+
+<a href="http://www.ej-technologies.com/products/jprofiler/overview.html">
+JProfiler</a>: an award-winning all-in-one Java performance profiler.
+
+
+</td>
+<td class="stuff">
+<table align="center" width="270" cellspacing="0" cellpadding="10" border="0" style="border: 1px solid silver;">
+<tbody>
+<tr align="center">
+<td align="center" class="stuff" >
+To get quick updates or report bugs/suggestions please join the QualiMap Google group:<br><br>
+<a title="To QualiMap Group" target="_blank" href="http://groups.google.com/group/qualimap">
+<img alt="Google Groups" src="img/browse-all-color.png" /></a><br>
+<form target="_blank" action="http://groups.google.com/group/qualimap/boxsubscribe" align="center">
+<input type="hidden" value="en" name="hl" />Your email: 
+<input type="text" name="email" /> 
+<input type="submit" value="Subscribe" name="sub" />
+</form>
+</td></tr>
+</tbody></table>
+<br><br>
+<!--<div align="center"  >
+<a title="SEQanswers Forum" target="_blank" href="http://www.seqanswers.com">
+<img width="270"  style="border: 1px solid silver;"  alt="SEQanswers" src="img/seqa-header.gif" /></a><br>
+</div>-->
+</td>
+
+
+</tr>
+
+<tr>
+<td class="header">Contact</td>
+<td class="header">Publications</td>
+<td class="header">Funding</td>
+</tr>
+<tr>
+	
+<td class="stuff"> Qualimap is a joint project of <a href="http://www.mpiib-berlin.mpg.de">Max Planck Institute For Infection Biology</a> and 
+<a href="http://bioinfo.cipf.es">Bioinformatics Department</a><br> of 
+<a href="http://www.cipf.es">Centro de Investigación Príncipe Felipe (CIPF)</a><br><br>
+<b>Team:</b><br>
+<a href="http://www.mendeley.com/profiles/konstantin-okonechnikov">Konstantin Okonechnikov<br></a>
+Sonia Tarazona<br>
+<!--
+Jose Carbonell   <span class="smallfont">(jcarbonell(a)cipf(dot)es)</span><br>
+Sonia Tarazona   <span 
+class="smallfont">(starazona(a)cipf(dot)es)</span><br>
+Stefan Götz   <span 
+class="smallfont">(sgoetz(a)cipf(dot)es)</span><br>
+Luis Miguel Cruz   <span 
+class="smallfont">(sm.cruz(a)juntadeandalucia(dot)es)</span><br>
+Javier Santoyo   <span 
+class="smallfont">(jsantoyo(a)cipf(dot)es)</span><br>
+Joaquin Dopazo   <span 
+	class="smallfont">(jdopazo(a)cipf(dot)es)</span><br> -->
+
+<a href="http://bioinfo.cipf.es/aconesa/">Ana Conesa</a></span><br>
+
+<br>Leader:<br>
+<a href="http://www.ncbi.nlm.nih.gov/pubmed?term=Garcia-Alcalde%20F%5BAuthor%5D%20OR%20%28Garcia%20F%5BAuthor%5D%20AND%20Blanco%20A%5BAuthor%5D%29&cmd=DetailsSearch">Fernando Garcia-Alcalde</a><br>
+
+</td>
+
+
+
+<td class="stuff">
+	Konstantin Okonechnikov, Ana Conesa and Fernando García-Alcalde
+<b>"Qualimap 2: advanced multi-sample quality control for high-throughput sequencing data."</b> 
+Bioinformatics(2015)     
+<br><a href="http://bioinformatics.oxfordjournals.org/content/early/2015/09/30/bioinformatics.btv566">btv566 (early access)</a>
+<br><br>
+Fernando García-Alcalde et al. <b>"Qualimap: evaluating next-generation sequencing alignment data."</b> 
+Bioinformatics 28, no. 20 (2012): 2678-2679.     
+<br><a href="http://bioinformatics.oxfordjournals.org/content/28/20/2678" >doi: 10.1093/bioinformatics/bts503</a>
+</td>
+
+<td class="stuff">
+BIO2009-10799 from the Spanish Ministry of Economy and Competitiveness and BIO2008-05266-E/- associated to the EU funded program ERA-NET PathoGenoMics.<br><br>
+
+Seventh Research Framework Programme of the European Union, Marie Curie Programme EIMID-IAPP (European Initiative for basic research in Microbiology and Infectious; PIAP-GA-2008-217768)<br>
+</td>
+
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<h3>QualiMap screenshots:</h3>
+<table>
+  <tbody>
+    <tr>
+      <td class="image">
+	<a id="thumb1" href="img/screenshot_bamqc_summary.png" class="highslide" onclick="return hs.expand(this)">
+	<img class="shot" src="img/screenshot_bamqc_summary.png" alt="Highslide JS" title="Click to enlarge" /></a>
+	<div class="highslide-caption"> BAM QC: summary </div>
+      </td>
+      <td class="image">
+       <a id="thumb1" href="img/screenshot_bamqc_coverage.png" class="highslide" onclick="return hs.expand(this)">
+        <img class="shot" src="img/screenshot_bamqc_coverage.png" alt="Highslide JS" title="Click to enlarge" /></a>
+        <div class="highslide-caption"> BAM QC: coverage across reference </div>
+      </td>
+      <td class="image">
+       <a id="thumb1" href="img/screenshot_bamqc_ref_fraction.png" class="highslide" onclick="return hs.expand(this)">
+        <img class="shot" src="img/screenshot_bamqc_ref_fraction.png" alt="Highslide JS" title="Click to enlarge" /></a>
+        <div class="highslide-caption"> BAM QC: reference fraction coverage </div>
+      </td class="image">
+    </tr>
+    <tr>
+      <td class="image">
+       <a id="thumb1" href="img/screenshot_rnaseq_genebody.png" class="highslide" onclick="return hs.expand(this)">
+        <img class="shot" src="img/screenshot_rnaseq_genebody.png" alt="Highslide JS" title="Click to enlarge" /></a>
+        <div class="highslide-caption"> RNA-seq QC: coverage across gene body </div>      </td>
+      <td class="image">
+       <a id="thumb1" href="img/screenshot_saturation.png" class="highslide" onclick="return hs.expand(this)">
+        <img class="shot" src="img/screenshot_saturation.png" alt="Highslide JS" title="Click to enlarge" /></a>
+        <div class="highslide-caption"> Counts QC: global saturation plot </div>
+      </td>
+      <td class="image">
+       <a id="thumb1" href="img/screenshot_multibamqc_gcdistr.png" class="highslide" onclick="return hs.expand(this)">
+        <img class="shot" src="img/screenshot_multibamqc_gcdistr.png" alt="Highslide JS" title="Click to enlarge" /></a>
+        <div class="highslide-caption"> Multi-sample BAM QC: GC-content distribution </div>
+      </td>
+    </tr>
+  </tbody>
+</table><br>
+    
+</body>
+<html>	

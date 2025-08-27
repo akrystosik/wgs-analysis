@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://github.com/akrystosik/wgs-analysis/metadata/mage_wgs_variants",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "MAGE (Multi-ancestry Analysis of Gene Expression) - Whole Genome Sequencing",
+  "description": "Whole genome sequencing data from the Multi-ancestry Analysis of Gene Expression study, containing genetic variants from 731 individuals from the 1000 Genomes Project representing 26 globally-distributed populations. Data is available through the 1000 Genomes Project and associated repositories.",
+  "url": "https://github.com/mccoy-lab/MAGE",
+  "license": "CC0 / 1000 Genomes Project Terms",
+  "creator": {
+    "@type": "Organization",
+    "name": "McCoy Lab, Johns Hopkins University / 1000 Genomes Project"
+  },
+  "citation": [
+    "Taylor DJ, et al. Sources of gene expression variation in a globally diverse human cohort. Nature (2024). DOI: 10.1038/s41586-024-07708-2",
+    "1000 Genomes Project Consortium. A global reference for human genetic variation. Nature 526, 68-74 (2015)."
+  ],
+  "keywords": [
+    "genetic variants",
+    "WGS",
+    "population genetics",
+    "1000 Genomes",
+    "diversity"
+  ],
+  "datePublished": "2025-08-27T19:24:48.467218",
+  "version": "1.0",
+  "identifier": "mage_wgs_variants_20250826",
+  "sc:organism": "Homo sapiens",
+  "sc:assayType": "Whole genome sequencing",
+  "sc:dataType": "genetic variants",
+  "sc:accessLevel": "protected",
+  "sc:dataAccess": "https://www.internationalgenome.org/",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "source_repository",
+      "name": "source_repository",
+      "description": "Access MAGE (Multi-ancestry Analysis of Gene Expression) - Whole Genome Sequencing through official repository",
+      "contentUrl": "https://www.internationalgenome.org/",
+      "encodingFormat": "text/html",
+      "sha256": "cbacd2e46490f4a6dd7b2cb464bb0c3a45a5102575ee79a4c52276c5d160692a",
+      "sc:accessRequirement": "Registration required"
+    }
+  ],
+  "sc:datasetStatistics": {
+    "subjectCount": "731 individuals from 26 populations",
+    "estimatedVariants": "~400M variants"
+  },
+  "sc:genomesProjectUrl": "https://www.internationalgenome.org/",
+  "sc:repository": {
+    "@type": "SoftwareSourceCode",
+    "name": "wgs-analysis",
+    "url": "https://github.com/akrystosik/wgs-analysis",
+    "description": "Multi-omics WGS analysis pipeline with paired RNA-seq datasets"
+  }
+}
