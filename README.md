@@ -89,14 +89,5 @@ If you use this pipeline or datasets, please cite:
   url = {https://github.com/akrystosik/wgs-analysis}
 }
 ```
-
-## License
-
-See [LICENSE](LICENSE) for details.
-
-## Contact
-
-Amy Krystosik - akrystal@chanzuckerberg.com
-
 ---
 **Note**: This pipeline focuses specifically on WGS datasets with paired RNA-seq data for comprehensive multi-omics analysis.
